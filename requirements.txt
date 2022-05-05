@@ -1,0 +1,5 @@
+dagster
+dagit
+pandas
+requests
+psycopg2-binary
