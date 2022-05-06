@@ -3,3 +3,4 @@ dagit
 pandas
 requests
 psycopg2-binary
+sqlachemy
