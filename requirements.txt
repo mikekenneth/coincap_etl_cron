@@ -3,4 +3,5 @@ dagit
 pandas
 requests
 psycopg2-binary
-sqlachemy
+sqlalchemy
+black
