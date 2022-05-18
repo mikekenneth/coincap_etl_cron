@@ -3,7 +3,7 @@ import requests
 import logging
 import psycopg2.extras as psycopg2_extras
 
-from typing import List, Dict, Any, AnyStr
+from typing import List, Dict, Any
 from xlib.db import WarehouseConnection
 from xlib.utils import _get_utc_from_unix_time
 from xlib.load_config import _get_warehouse_creds
