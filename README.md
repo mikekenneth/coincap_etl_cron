@@ -9,24 +9,24 @@ Simple fetch the list of Brypto Exchanges from [CoinCap API](https://docs.coinca
 
 ## Usage
 ### Setup
-- Create `.conf.ini` as a duplicate of `.conf_sample.ini` file with your PostgreSQL Database credentials:
+- Create `.conf.ini` as a duplicate of `.conf_sample.ini` & update with your PostgreSQL Database credentials:
 ```bash
 cp .conf_sample.ini .conf.ini
 ```
 
-- Install Python Dependencies (It's preferrable to use a virtual environment)
+- Install Python Dependencies (It's preferrable to use a virtual environment):
 ```bash
 pip3 install -r requirements.txt
 ```
 
-- Setup database. (This drops then recreate the schema & tables).
+- Setup database. (This drops then recreate the schema & tables):
 ```bash
 python3 setup.py
 ```
 ### Run ETL
-- Run the command below to run the ETL pipeline.
+- Run the command below to run the ETL pipeline:
 ```bash
-python setup.py
+python run_etl.py
 ```
 
 ## Tech Stack
