@@ -8,9 +8,9 @@ CONFIG = _get_conf(ini_file=".conf.ini", section="POSTGRES")
 
 def _get_warehouse_creds() -> DBConnection:
     return DBConnection(
-        user=CONFIG["username"],
+        user=CONFIG["user"],
         password=CONFIG["password"],
-        db=CONFIG["database"],
-        host=CONFIG["server"],
+        db=CONFIG["db"],
+        host=CONFIG["host"],
         port=int(CONFIG["port"]),
     )

@@ -1,7 +1,9 @@
-DROP TABLE IF EXISTS bitcoin.exchange;
-DROP SCHEMA IF EXISTS bitcoin;
-CREATE SCHEMA bitcoin;
-CREATE TABLE bitcoin.exchange (
+DROP TABLE IF EXISTS crypto.exchange;
+DROP SCHEMA IF EXISTS crypto;
+CREATE SCHEMA crypto;
+CREATE TABLE crypto.exchange (
+    batch_id VARCHAR(50),
+    batch_datetime TIMESTAMP,
     id VARCHAR(50),
     name VARCHAR(50),
     rank INT,
