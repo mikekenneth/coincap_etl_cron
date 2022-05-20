@@ -30,7 +30,7 @@ python setup.py
 ```
 
 ## Tech Stack
-- [Python3](https://www.python.org/
+- [Python3](https://www.python.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 
 
