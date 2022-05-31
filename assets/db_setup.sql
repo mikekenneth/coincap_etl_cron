@@ -12,6 +12,10 @@ CREATE TABLE crypto.exchange (
     tradingPairs INT,
     socket BOOLEAN,
     exchangeUrl VARCHAR(50),
+<<<<<<< HEAD
     updated BIGINT,
+=======
+    updatedUnixmillis BIGINT,
+>>>>>>> 433f1ec813f0537a8ad3bea1523e25b63a5662cf
     updatedUTC TIMESTAMP
 );

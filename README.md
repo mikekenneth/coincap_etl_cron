@@ -26,7 +26,7 @@ python3 setup.py
 ### Run ETL
 - Run the command below to run the ETL pipeline:
 ```bash
-python run_etl.py
+python3 run_etl.py
 ```
 
 ## Tech Stack

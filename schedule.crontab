@@ -1,0 +1,1 @@
+*/5 * * * * python3 run_etl.py
