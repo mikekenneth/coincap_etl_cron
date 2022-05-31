@@ -11,13 +11,13 @@ def extract(url):
 
 
 def transform_enrich(data):
-    batch_id = str(uuid4())
-    batch_datetime = datetime.now()
+    batchId = str(uuid4())
+    batchDatetime = datetime.now()
     # Add batch_id & current date to data before inserting
     for d in data:
-        d["batch_id"] = batch_id
-        d["batch_datetime"] = batch_datetime
-        d["update_dt"] = _get_utc_from_unix_time(d.get("updated"))
+        d["batchId"] = batchId
+        d["batchDatetime"] = batchDatetime
+        d["updatedUTC"] = _get_utc_from_unix_time(d.get("updated"))
     return data
 
 

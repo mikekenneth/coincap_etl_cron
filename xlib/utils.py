@@ -26,22 +26,22 @@ def _get_utc_from_unix_time(unix_ts: Optional[Any], second: int = 1000) -> Optio
 def _get_exchange_insert_query() -> str:
     return """
     INSERT INTO crypto.exchange (
-        batch_id,
-        batch_datetime,
+        batchId,
+        batchDatetime,
         id,
         name,
         rank,
-        percenttotalvolume,
-        volumeusd,
-        tradingpairs,
+        percentTotalVolume,
+        volumeUsd,
+        tradingPairs,
         socket,
-        exchangeurl,
-        updated_unix_millis,
-        updated_utc
+        exchangeUrl,
+        updated,
+        updatedUTC
     )
     VALUES (
-        %(batch_id)s,
-        %(batch_datetime)s,
+        %(batchId)s,
+        %(batchDatetime)s,
         %(exchangeId)s,
         %(name)s,
         %(rank)s,
@@ -51,7 +51,7 @@ def _get_exchange_insert_query() -> str:
         %(socket)s,
         %(exchangeUrl)s,
         %(updated)s,
-        %(update_dt)s
+        %(updatedUTC)s
     );"""
 
 
