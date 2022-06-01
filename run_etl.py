@@ -6,7 +6,8 @@ from xlib.load_config import _get_warehouse_creds
 from xlib.utils import get_exchange_data, _get_exchange_insert_query, _get_utc_from_unix_time
 
 
-def extract(url):
+def extract():
+    url = "https://api.coincap.io/v2/exchanges"
     return get_exchange_data(url)
 
 
@@ -27,7 +28,6 @@ def load(data):
 
 
 if __name__ == "__main__":
-    url = "https://api.coincap.io/v2/exchanges"
-    data = extract(url)
+    data = extract()
     data_enriched = transform_enrich(data)
     load(data_enriched)
