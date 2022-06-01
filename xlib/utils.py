@@ -19,7 +19,7 @@ def _get_conf(ini_file: str, section: str = None) -> dict:
     return {i: dict(config[i]) for i in config.sections()}
 
 
-def _get_utc_from_unix_time(unix_ts: Optional[Any], second: int = 1000) -> Optional[datetime]:
+def get_utc_from_unix_time(unix_ts: Optional[Any], second: int = 1000) -> Optional[datetime]:
     return datetime.utcfromtimestamp(int(unix_ts) / second) if unix_ts else None
 
 

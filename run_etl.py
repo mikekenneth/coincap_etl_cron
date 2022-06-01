@@ -3,7 +3,7 @@ from uuid import uuid4
 from datetime import datetime
 from xlib.db import WarehouseConnection
 from xlib.load_config import _get_warehouse_creds
-from xlib.utils import get_exchange_data, _get_exchange_insert_query, _get_utc_from_unix_time
+from xlib.utils import get_exchange_data, _get_exchange_insert_query, get_utc_from_unix_time
 
 
 def extract():
@@ -18,7 +18,7 @@ def transform_enrich(data):
     for d in data:
         d["batchId"] = batchId
         d["batchDatetime"] = batchDatetime
-        d["updatedUTC"] = _get_utc_from_unix_time(d.get("updated"))
+        d["updatedUTC"] = get_utc_from_unix_time(d.get("updated"))
     return data
 
 
