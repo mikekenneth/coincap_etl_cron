@@ -28,6 +28,8 @@ def load(data):
 
 
 if __name__ == "__main__":
+    # db_setup()
     data = extract()
     data_enriched = transform_enrich(data)
     load(data_enriched)
+    print("Loaded data in database!!!")

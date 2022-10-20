@@ -1,7 +1,7 @@
 
 # CoinCAP API ETL Pipeline
 
-A sample ETL Pipeline project using Python script only.
+A sample ETL Pipeline project using Python script only hosted using Docker.
 You can read the [article]() on this. :smile:
 
 ## Objective
@@ -9,36 +9,24 @@ Simple fetch the list of Crypto Exchanges from [CoinCap API](https://docs.coinca
 
 ## Usage
 ### Setup
-- Create `.conf.ini` as a duplicate of `.conf_sample.ini` & update with your **PostgreSQL** Database credentials:
-```bash
-cp .conf_sample.ini .conf.ini
-```
+- Update `.env` with your **PostgreSQL** Database credentials:
 
-- Install Python Dependencies (It's preferable to use a virtual environment):
+- Run with docker-compose
 ```bash
-pip3 install -r requirements.txt
-```
-
-- Setup database. (This drops then recreate the schema & tables):
-```bash
-python3 setup.py
-```
-### Run ETL
-- Run the command below to run the ETL pipeline:
-```bash
-python3 run_etl.py
+docker-compose up
 ```
 
 ## Tech Stack
 - [Python3](https://www.python.org/)
 - [PostgreSQL](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
 
 
 ## TO-DO
 - [x] Make the ETL functional as a python script
 - [x] Add A Batch ID and Datetime
 - [x] Design & Documentation
-- [ ] Add Docker: Make the project easily deployable
+- [x] Add Docker: Make the project easily deployable
 
 
 ## Authors

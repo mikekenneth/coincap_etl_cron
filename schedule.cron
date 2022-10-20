@@ -1,0 +1,3 @@
+SHELL=/bin/bash
+HOME=/
+* * * * * WAREHOUSE_USER=postgres WAREHOUSE_PASSWORD=dbpassword1234 WAREHOUSE_DB=postgres WAREHOUSE_HOST=warehouse WAREHOUSE_PORT=5432 PYTHONPATH=/code /usr/local/bin/python /code/run_etl.py >> /var/log/cron.log 2>&1
